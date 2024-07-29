@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>House Price Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="brokered_by">Brokered By:</label>
+            <input type="text" id="brokered_by" name="brokered_by" required><br><br>
+            
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required><br><br>
+            
+            <label for="bed">Number of Bedrooms:</label>
+            <input type="text" id="bed" name="bed" required><br><br>
+            
+            <label for="bath">Number of Bathrooms:</label>
+            <input type="text" id="bath" name="bath" required><br><br>
+            
+            <label for="acre_lot">Lot Size (Acres):</label>
+            <input type="text" id="acre_lot" name="acre_lot" required><br><br>
+            
+            <label for="street">Street:</label>
+            <input type="text" id="street" name="street" required><br><br>
+            
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required><br><br>
+            
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br><br>
+            
+            <label for="zip_code">Zip Code:</label>
+            <input type="text" id="zip_code" name="zip_code" required><br><br>
+            
+            <label for="house_size">House Size (sq ft):</label>
+            <input type="text" id="house_size" name="house_size" required><br><br>
+            
+            <label for="price_per_sqft">Price per Square Foot:</label>
+            <input type="text" id="price_per_sqft" name="price_per_sqft" required><br><br>
+            
+            <label for="total_rooms">Total Rooms:</label>
+            <input type="text" id="total_rooms" name="total_rooms" required><br><br>
+            
+            <label for="house_age">House Age:</label>
+            <input type="text" id="house_age" name="house_age" required><br><br>
+            
+            <input type="submit" value="Predict">
+        </form>
+        
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
